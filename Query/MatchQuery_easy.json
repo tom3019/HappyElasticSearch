@@ -1,0 +1,10 @@
+GET /kibana_sample_data_ecommerce/_search {
+  "query": {
+    "match": {
+      "customer_id": "27"
+    }
+  }
+}
+//µ•©ÛSQL
+//SELECT * FROM TABLE
+//WHERE customer_id = 27

@@ -1,0 +1,12 @@
+GET /kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "match": {
+      "customer_id": {
+        "query": 27,
+        "operator": "and",
+        "fuzziness": "AUTO"
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+GET /kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+//µ•©ÛSQL
+//SELECT * FROM TABLE

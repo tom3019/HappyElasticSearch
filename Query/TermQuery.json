@@ -1,0 +1,14 @@
+GET /kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "term": {
+      "order_id": {
+        "value": 723055
+      }
+    }
+
+  }
+}
+//SQL
+//SELECT * FROM TABLE
+//WHERE order_id = 723055

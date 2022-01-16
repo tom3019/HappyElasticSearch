@@ -1,0 +1,44 @@
+GET /kibana_sample_data_ecommerce/_search {
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "order_date": {
+              "value": "2022-02-03"
+            }
+          }
+        },
+        {
+          "term": {
+            "day_of_week": {
+              "value": "Thursday"
+            }
+          }
+        }
+      ],
+
+      "should": [
+        {
+          "term": {
+            "customer_id": {
+              "value": 26
+            }
+          }
+        },
+        {
+          "term": {
+            "customer_id": {
+              "value": 27
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+//µ•©ÛSQL
+//SELECT * FROM TABLE
+//WHERE customer_id = 26 OR customer_id = 27 
+//AND order_date = "2022-02-03"
+//AND day_of_week = 'Thursday'

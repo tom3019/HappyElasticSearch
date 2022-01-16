@@ -1,0 +1,26 @@
+GET /kibana_sample_data_ecommerce/_search {
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "customer_id": {
+              "value": 26
+            }
+          }
+        },
+        {
+          "term": {
+            "order_id": {
+              "value": 584058
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+//µ•©ÛSQL
+//SELECT * FROM TABLE
+//WHERE customer_id = 26
+//AND order_id = 584058

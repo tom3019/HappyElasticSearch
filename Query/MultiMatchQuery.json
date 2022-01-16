@@ -1,0 +1,12 @@
+GET /kibana_sample_data_ecommerce/_search {
+  "query": {
+    "multi_match": {
+      "query": "Eddie",
+      "fields": [ "customer_first_name.keyword", "customer_full_name" ]
+    }
+  }
+}
+//SQL
+//SELECT * FROM TABLE
+//WHERE customer_first_name = 'Eddie'
+//AND customer_full_name LIKE '%Eddie%'

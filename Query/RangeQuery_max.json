@@ -1,0 +1,13 @@
+GET /kibana_sample_data_ecommerce/_search
+{
+  "query": {
+    "range": {
+      "order_date": {
+        "lte": "2022-01-31"
+      }
+    }
+  }
+}
+//SQL
+//SELECT * FROM TABLE
+//WHERE order_date <=  "2022-01-31"

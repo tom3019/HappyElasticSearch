@@ -1,0 +1,13 @@
+GET /kibana_sample_data_ecommerce/_search {
+  "query": {
+    "terms": {
+      "order_id": [
+        723055,
+        584677
+      ]
+    }
+  }
+}
+//SQL
+//SELECT * FROM TABLE
+//WHERE order_id IN (723055,584677)
