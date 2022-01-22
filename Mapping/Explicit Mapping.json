@@ -1,0 +1,10 @@
+PUT /indexName
+{
+  "mappings": {
+    "properties": {
+      "name":{"type": "text"},
+      "account":{"type": "text"},
+      "password":{"type": "keyword"}
+    }
+  }
+}

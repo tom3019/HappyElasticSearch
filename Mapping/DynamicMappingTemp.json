@@ -1,0 +1,23 @@
+PUT /indexName {
+  "mappings": {
+    "dynamic_templates": [
+      {
+        "strings_as_keyword": {
+          "mapping": {
+            "type": "keyword"
+          },
+          "match": "Kws*",
+          "unmatch": "*_text",
+          "match_mapping_type": "string"
+        }
+      }
+    ]
+  }
+}
+
+//============================
+//strings_as_keyword 為template名稱，可自訂
+//mapping 代表想要映射的型別
+//match 尋找欄位的欄位名稱
+//unmatch 排除的欄位名稱
+//match_mapping_type 原本資料的型別
