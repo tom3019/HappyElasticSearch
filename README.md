@@ -14,7 +14,7 @@
 
 - Command
 
-- Aggregation
+- [Aggregation](./Aggregation/README.md)
 
 - ElasticSearch in dotNet
 

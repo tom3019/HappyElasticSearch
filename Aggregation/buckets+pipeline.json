@@ -1,0 +1,24 @@
+GET /IndexName/_search{
+  "size": 0,
+  "aggs": {
+    "county": {
+      "terms": {
+        "field": "county.keyword"
+      },
+      "aggs": {
+        "city": {
+          "terms": {
+            "field": "district.keyword"
+          }
+        }
+      }
+    }
+  }
+}
+
+//============================
+//size 0代表不回傳查詢結果，只回傳Aggregation
+//此範例原本資料
+//1.台北市 大安區 2.台北市 中正區 3.新北市 板橋區 4.新北市 新莊區 
+//變成
+//1.台北市 大安區 中正區 2. 新北市 板橋區 新莊區

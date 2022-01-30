@@ -1,0 +1,49 @@
+GET /IndexName/_search {
+  "size": 0,
+  "aggs": {
+    "day": {
+      "terms": {
+        "field": "day_of_week",
+        "size": 10
+      }
+    }
+  }
+}
+
+
+//============================
+//size 0代表不回傳查詢結果，只回傳Aggregation
+//每筆資料都有一個欄位為星期幾 例:
+//"day_of_week" : "Monday",
+//分桶後結果:
+  //"buckets" : [
+  //      {
+  //        "key" : "Thursday",
+  //        "doc_count" : 775
+  //      },
+  //      {
+  //        "key" : "Friday",
+  //        "doc_count" : 770
+  //      },
+  //      {
+  //        "key" : "Saturday",
+  //        "doc_count" : 736
+  //      },
+  //      {
+  //        "key" : "Sunday",
+  //        "doc_count" : 614
+  //      },
+  //      {
+  //        "key" : "Tuesday",
+  //        "doc_count" : 609
+  //      },
+  //      {
+  //        "key" : "Wednesday",
+  //        "doc_count" : 592
+  //      },
+  //      {
+  //        "key" : "Monday",
+  //        "doc_count" : 579
+  //      }
+  //    ]
+

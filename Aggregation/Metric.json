@@ -1,0 +1,40 @@
+GET /IndexName/_search {
+  "size": 0,
+  "aggs": {
+    "productsBaseAvg": {
+      "avg": {
+        "field": "products.base_price"
+      }
+    },
+    "productsBaseMax": {
+      "max": {
+        "field": "products.base_price"
+      }
+    },
+    "productsBaseMin": {
+      "min": {
+        "field": "products.base_price"
+      }
+    },
+    "productsBaseState": {
+      "stats": {
+        "field": "products.base_price"
+      }
+
+    }
+  }
+}
+
+//============================
+//size 0ぃ肚琩高挡狦肚Aggregation
+//璸衡程 程 キА单
+//ㄏノstats穦р程 程 キА 羆 计秖场ㄓ
+//:
+//"aggregations" : {
+//  "productsBaseState" : {
+//    "count" : 10087,
+//    "min" : 5.98828125,
+//    "max" : 1080.0,
+//    "avg" : 34.88652318578368,
+//    "sum" : 351900.359375
+//  }
