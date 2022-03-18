@@ -2,8 +2,9 @@
 
 ## Table of Contents
 - [介紹](#introduce)
-- [動態映射](#dynamic-mapping)
-- [明確映射](#explicit-mapping)
+- [分桶聚合](#bucket-aggregation)
+- [運算聚合](#metric-aggregation)
+- [組合聚合](#pipiline-aggregation)
 ## Introduce
 聚合，提供了像是RDBMS的COUNT、AVG等數學運算的方法，也提供了像是RDBMS裡的Group By等方法
 
@@ -15,5 +16,4 @@
 
 ##　Pipiline Aggregation
 對其他Aggregation再進行一次Aggregation
-
 
